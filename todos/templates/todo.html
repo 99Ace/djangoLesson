@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> My Todos</h1>
+    <button style="background-color:yellow"><a href="create">Create</a></button>
+    <table style="border:black solid 1pt; width:100% ">
+        {% for i in items %}
+        <tr>
+            <td> {{ i.name }} </td>
+            <td> {{ i.done }} </td>
+            <td> {{ i.tag }} </td>
+            <td> {{ i.category }} </td>
+            <td> {{ i.assign }} </td>
+            <td><a href="edit/{{i.id}}">Edit</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+
+</html>
